@@ -1,11 +1,13 @@
-.App {
+.PartyVibe {
   text-align: center;
+  display: flex;
+  flex-direction:row ;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* .Cards {
+  display: flex;
+  flex-direction: row ;
+} */
 
 
 .App-header {

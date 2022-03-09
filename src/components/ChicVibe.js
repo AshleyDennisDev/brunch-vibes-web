@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
+import BrunchCards from "./Cards";
 
  export default function ChicVibe() {
     const [chic, setChic] = useState([]);
     useEffect(() => {
-      fetch("http://localhost:3000/restaurants/chic")
+      fetch("https://brunch-vibes-ad.uc.r.appspot.com/restaurants/chic")
         .then((response) => response.json())
         .then((data) => setChic(data))
         .catch(alert);
@@ -18,6 +19,7 @@ import React, { useEffect, useState } from "react";
               {chic.map((restaurant) => {
                 return (
                   <>
+                  <BrunchCards name={restaurant.name} image={restaurant.image} >
                     <h2 key={restaurant.id}>
                         {restaurant.name}
                         <img src={restaurant.image} alt='restaurant\s chic vibe'/>
@@ -26,6 +28,7 @@ import React, { useEffect, useState } from "react";
                     {restaurant.location}
                     {restaurant.website}
                         </h2>
+                        </BrunchCards>
                   </>
                 );
               })}

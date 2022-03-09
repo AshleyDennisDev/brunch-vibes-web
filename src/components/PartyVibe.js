@@ -20,6 +20,7 @@ import React, { useEffect, useState } from "react";
                 <>
                   <h2 key={restaurant.id}>
                     {restaurant.name}
+                    <img src={restaurant.image} alt='restaurant\s party vibe'/>
                     {restaurant.vibe}
                     {restaurant.rating}
                     {restaurant.location}

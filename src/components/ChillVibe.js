@@ -18,7 +18,14 @@ export default function ChillVibe() {
               {chill.map((restaurant) => {
                 return (
                   <>
-                    <h2 key={restaurant.id}>{restaurant.name}</h2>
+                    <h2 key={restaurant.id}>
+                        {restaurant.name}
+                        <img src={restaurant.image} alt='restaurant\s chill vibe'/>
+                    {restaurant.vibe}
+                    {restaurant.rating}
+                    {restaurant.location}
+                    {restaurant.website}
+                        </h2>
                   </>
                 );
               })}

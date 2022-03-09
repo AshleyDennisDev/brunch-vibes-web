@@ -18,7 +18,14 @@ import React, { useEffect, useState } from "react";
               {chic.map((restaurant) => {
                 return (
                   <>
-                    <h2 key={restaurant.id}>{restaurant.name}</h2>
+                    <h2 key={restaurant.id}>
+                        {restaurant.name}
+                        <img src={restaurant.image} alt='restaurant\s chic vibe'/>
+                    {restaurant.vibe}
+                    {restaurant.rating}
+                    {restaurant.location}
+                    {restaurant.website}
+                        </h2>
                   </>
                 );
               })}

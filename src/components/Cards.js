@@ -10,6 +10,7 @@ import {
 
 export default function BrunchCards({ name, image }) {
   return (
+    <container>
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia component="img" height="140" image={image} alt={name} />
       <CardContent>
@@ -22,5 +23,6 @@ export default function BrunchCards({ name, image }) {
         <Button size="small">Learn More</Button>
       </CardActions>
     </Card>
+    </container>
   );
 }

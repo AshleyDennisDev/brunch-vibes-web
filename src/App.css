@@ -1,14 +1,14 @@
-.PartyVibe {
+/* .party {
   text-align: center;
   display: flex;
-  flex-direction:row ;
-}
-
-/* .Cards {
-  display: flex;
-  flex-direction: row ;
+  flex-direction: row;
 } */
 
+#partyVibe {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
 
 .App-header {
   background-color: #282c34;
@@ -21,8 +21,8 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+ul {
+  display: flex;
+  flex-direction: row;
+  margin: 50px 100px 120px 50px;
 }
-
-

@@ -2,6 +2,10 @@ body,
 html {
   height: 100%;
 }
+.hero{
+  height: 70vh;
+  object-fit: cover;
+}
 .hero-image {
   background-image: url("https://cdn.pixabay.com/photo/2017/08/02/21/09/interior-2573445_1280.jpg");
   background-position: center;
@@ -10,6 +14,7 @@ html {
   position: relative;
   height: 100%;
   width: 100%;
+  object-fit: cover;
 }
 
 a {

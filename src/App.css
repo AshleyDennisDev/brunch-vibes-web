@@ -26,3 +26,11 @@ ul {
   flex-direction: row;
   margin: 50px 100px 120px 50px;
 }
+
+#box{
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}

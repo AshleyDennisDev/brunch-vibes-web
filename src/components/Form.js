@@ -1,40 +1,31 @@
 import React, { useState } from "react";
 import { Box, TextField, Button } from "@mui/material";
 
-export default function AddVibe({ setVibe }) {
-  const [newVibe, setNewVibe] = useState("");
-  const [newName, setNewName] = useState("");
-  const [newRating, setNewRating] = useState("");
-  const [newLocation, setNewLocation] = useState("");
+export default function AddVibe() {
+  const [newVibe, setNewVibe] = useState([]);
 
   const handleOnClick = () => {
-    const vibeObject = {
-      name: newName,
-      vibe: newVibe,
-      rating: newRating,
-      location: newLocation,
-    };
     fetch("https://brunch-vibes-ad.uc.r.appspot.com/restaurants/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(vibeObject),
+      body: JSON.stringify(newVibe),
     })
       .then(() => {
-        setNewVibe();
-        setNewName();
-        setNewLocation();
-        setNewRating();
         fetch("https://brunch-vibes-ad.uc.r.appspot.com/restaurants/")
           .then((response) => response.json())
-          .then((data) => setVibe(data));
+          .then((data) => setNewVibe(data));
       })
       .catch((err) => alert(err));
   };
+  const handleChange = (event) => {
+    setNewVibe({ ...newVibe, [event.target.name]: event.target.value });
+    console.log(event);
+  };
 
   return (
-    <Box
+    <Box id='box'
       component="form"
       sx={{
         "& > :not(style)": { m: 1, width: "25ch" },
@@ -45,13 +36,33 @@ export default function AddVibe({ setVibe }) {
       autoComplete="off"
     >
       <TextField
-        id="outlined-basic"
+        id="nameField"
         label="Restaurant Name"
+        name="name"
         variant="outlined"
+        onChange={handleChange}
       />
-      <TextField id="outlined-basic" label="Vibe" variant="outlined" />
-      <TextField id="outlined-basic" label="Location" variant="outlined" />
-      <TextField id="outlined-basic" label="Rating" variant="outlined" />
+      <TextField
+        id="vibeField"
+        name="vibe"
+        label="Vibe"
+        variant="outlined"
+        onChange={handleChange}
+      />
+      <TextField
+        id="locationField"
+        name="location"
+        label="Location"
+        variant="outlined"
+        onChange={handleChange}
+      />
+      <TextField
+        id="ratingField"
+        name="rating"
+        label="Rating"
+        variant="outlined"
+        onChange={handleChange}
+      />
 
       <Button variant="outlined" onClick={handleOnClick}>
         Add Vibe

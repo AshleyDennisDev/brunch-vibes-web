@@ -6,10 +6,12 @@ import {
   CardMedia,
   Button,
   Typography,
+  IconButton,
+  Rating
 } from "@mui/material/";
-import AddLocationIcon from '@mui/icons-material/AddLocation';
+import AddLocationIcon from "@mui/icons-material/AddLocation";
 
-export default function BrunchCards({ name, image, description, location }) {
+export default function BrunchCards({ name, image, description, location, rating }) {
   return (
     <container>
     <Card sx={{ maxWidth: 345 }}>
@@ -21,13 +23,19 @@ export default function BrunchCards({ name, image, description, location }) {
         <Typography gutterBottom variant="p" component="div">
           {description}
         </Typography>
+        <Typography gutterBottom variant="p" component="div">
+        {location}
+        </Typography>
+
       </CardContent>
       <CardActions>
-        <AddLocationIcon>
-          {location}
-        </AddLocationIcon>
+      <Typography component="rating"></Typography>
+<Rating name="rating" value={rating} readOnly />
+{/* <IconButton aria-label='location'>
+        <AddLocationIcon location={location}></AddLocationIcon>
+          </IconButton> */}
         <Button size="small"></Button>
-        <Button size="small">Learn More</Button>
+        <Button size="small">Website</Button>
       </CardActions>
     </Card>
     </container>

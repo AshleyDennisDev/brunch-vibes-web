@@ -26,6 +26,7 @@ export default function ChicVibe() {
                       name={restaurant.name}
                       image={restaurant.image}
                       description={restaurant.description}
+                      location={restaurant.location}
                     >
                       <h2 key={restaurant.id}>
                         {restaurant.name}

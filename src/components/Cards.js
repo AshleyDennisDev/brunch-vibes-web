@@ -9,7 +9,7 @@ import {
 } from "@mui/material/";
 import AddLocationIcon from '@mui/icons-material/AddLocation';
 
-export default function BrunchCards({ name, image, description }) {
+export default function BrunchCards({ name, image, description, location }) {
   return (
     <container>
     <Card sx={{ maxWidth: 345 }}>
@@ -23,7 +23,9 @@ export default function BrunchCards({ name, image, description }) {
         </Typography>
       </CardContent>
       <CardActions>
-        {/* <AddLocationIcon>{location}</AddLocationIcon> */}
+        <AddLocationIcon>
+          {location}
+        </AddLocationIcon>
         <Button size="small"></Button>
         <Button size="small">Learn More</Button>
       </CardActions>

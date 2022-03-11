@@ -25,6 +25,7 @@ export default function ChicVibe() {
                     <BrunchCards
                       name={restaurant.name}
                       image={restaurant.image}
+                      description={restaurant.description}
                     >
                       <h2 key={restaurant.id}>
                         {restaurant.name}

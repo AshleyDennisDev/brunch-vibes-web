@@ -27,19 +27,8 @@ export default function ChillVibe() {
                       image={restaurant.image}
                       description={restaurant.description}
                       location={restaurant.location}
-                    >
-                      <h2 key={restaurant.id}>
-                        {restaurant.name}
-                        <img
-                          src={restaurant.image}
-                          alt="restaurant\s chill vibe"
-                        />
-                        {restaurant.vibe}
-                        {restaurant.rating}
-                        {restaurant.location}
-                        {restaurant.website}
-                      </h2>
-                    </BrunchCards>
+                      rating={restaurant.rating}
+                    ></BrunchCards>
                   </Container>
                 </>
               );

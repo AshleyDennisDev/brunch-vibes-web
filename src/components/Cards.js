@@ -1,6 +1,5 @@
 import * as React from "react";
 import defaultPic from'../images/defaultPic.jpeg'
-
 import {
   Card,
   CardActions,
@@ -8,10 +7,8 @@ import {
   CardMedia,
   Button,
   Typography,
-  IconButton,
   Rating
 } from "@mui/material/";
-import AddLocationIcon from "@mui/icons-material/AddLocation";
 
 export default function BrunchCards({ name, image, description, location, rating }) {
   return (
@@ -30,13 +27,13 @@ export default function BrunchCards({ name, image, description, location, rating
         </Typography>
 
       </CardContent>
-      <CardActions>
-      <Typography component="rating"></Typography>
-<Rating name="rating" value={rating} readOnly />
-{/* <IconButton aria-label='location'>
-        <AddLocationIcon location={location}></AddLocationIcon>
-          </IconButton> */}
-        <Button size="small"></Button>
+      <CardActions display='flex' align-items='center'>
+      <Typography component="rating" >
+      {rating} 
+        </Typography>
+        <Rating name="rating" value={rating} readOnly />
+
+        <Button size="small" value={rating}></Button>
         <Button size="small">Website</Button>
       </CardActions>
     </Card>

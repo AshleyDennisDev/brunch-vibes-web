@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, {useState} from "react";
 import defaultPic from'../images/defaultPic.jpeg'
 import '../App.css'
 import {
@@ -11,7 +11,8 @@ import {
   Rating
 } from "@mui/material/";
 
-export default function BrunchCards({ name, image, description, location, rating }) {
+export default function BrunchCards({ name, image, description, location, rating, website }) {
+
   return (
     <container>
     <Card sx={{ maxWidth: 345 }}>
@@ -34,8 +35,7 @@ export default function BrunchCards({ name, image, description, location, rating
         </Typography>
         <Rating name="rating" value={rating} readOnly />
 
-        <Button size="small" value={rating}></Button>
-        <Button size="small">Website</Button>
+        <Button size="small" href={website}>Website</Button>
       </CardActions>
     </Card>
     </container>

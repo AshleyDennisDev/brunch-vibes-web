@@ -29,6 +29,7 @@ export default function ChillVibe() {
                       description={restaurant.description}
                       location={restaurant.location}
                       rating={restaurant.rating}
+                      website={restaurant.website}
                     ></BrunchCards>
                   </Container>
                 </>

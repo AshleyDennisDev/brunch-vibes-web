@@ -29,6 +29,7 @@ export default function ChicVibe() {
                       description={restaurant.description}
                       location={restaurant.location}
                       rating={restaurant.rating}
+                      website={restaurant.website}
                     ></BrunchCards>
                   </Container>
                 </>

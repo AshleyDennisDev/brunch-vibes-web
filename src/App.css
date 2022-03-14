@@ -4,10 +4,10 @@ align-items: center;
 background-image: linear-gradient(to right, #fdf7ff, #fff5fb, #fff4f2, #fff5e9, #fff8e4, #f9fae3, #f2fbe3, #e9fde6, #defbed, #d8f7f3, #d7f3f7, #daeef7);
 }
 
-/* .img-default{
-  src:url('./images/defaultPic.jpeg');
+.default-img{
+  src: url('./images/defaultPic.jpeg');
   opacity: 0.5
-  }; */
+  };
 
 
 

@@ -1,15 +1,27 @@
 .App {
-align-content: center;
-align-items: center;
-background-image: linear-gradient(to right, #fdf7ff, #fff5fb, #fff4f2, #fff5e9, #fff8e4, #f9fae3, #f2fbe3, #e9fde6, #defbed, #d8f7f3, #d7f3f7, #daeef7);
+  align-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+    to right,
+    #fdf7ff,
+    #fff5fb,
+    #fff4f2,
+    #fff5e9,
+    #fff8e4,
+    #f9fae3,
+    #f2fbe3,
+    #e9fde6,
+    #defbed,
+    #d8f7f3,
+    #d7f3f7,
+    #daeef7
+  );
 }
 
-.default-img{
-  src: url('./images/defaultPic.jpeg');
-  opacity: 0.5
-  };
-
-
+.default-img {
+  src: url("./images/defaultPic.jpeg");
+  opacity: 0.5;
+}
 
 #vibe {
   display: flex;
@@ -34,7 +46,7 @@ ul {
   margin: 50px 100px 120px 50px;
 }
 
-#box{
+#box {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
@@ -42,8 +54,8 @@ ul {
   justify-content: center;
 }
 
-.footer{
-text-align: center;
-padding-top: 30px;
-padding-bottom: 20px;
+.footer {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 20px;
 }

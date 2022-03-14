@@ -17,7 +17,7 @@ export default function PartyVibe() {
         <h2>Loading...</h2>
       ) : (
         <div>
-          <h2 id='partyVibe'>Party Vibes</h2>
+          <h2 id="partyVibe">Party Vibes</h2>
           <ul>
             {party.map((restaurant) => {
               return (

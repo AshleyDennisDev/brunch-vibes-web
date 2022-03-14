@@ -22,7 +22,7 @@ export default function ChicVibe() {
             {chic.map((restaurant) => {
               return (
                 <>
-                  <Container id='vibe'>
+                  <Container id="vibe">
                     <BrunchCards
                       name={restaurant.name}
                       image={restaurant.image}

@@ -4,6 +4,7 @@ import PartyVibe from "./components/PartyVibe";
 import ChicVibe from "./components/ChicVibe";
 import Form from "./components/Form";
 import Hero from "./components/Hero";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <ChillVibe></ChillVibe>
       <ChicVibe></ChicVibe>
       <Form>Add a Vibe</Form>
+      <Footer></Footer>
     </div>
   );
 }

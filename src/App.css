@@ -1,10 +1,17 @@
-/* .party {
-  text-align: center;
-  display: flex;
-  flex-direction: row;
-} */
+.App {
+align-content: center;
+align-items: center;
+background-image: linear-gradient(to right, #fdf7ff, #fff5fb, #fff4f2, #fff5e9, #fff8e4, #f9fae3, #f2fbe3, #e9fde6, #defbed, #d8f7f3, #d7f3f7, #daeef7);
+}
 
-#partyVibe {
+/* .img-default{
+  src:url('./images/defaultPic.jpeg');
+  opacity: 0.5
+  }; */
+
+
+
+#vibe {
   display: flex;
   flex-direction: row;
   margin-bottom: 10px;
@@ -35,3 +42,8 @@ ul {
   justify-content: center;
 }
 
+.footer{
+text-align: center;
+padding-top: 30px;
+padding-bottom: 20px;
+}

@@ -1,6 +1,7 @@
 import { Container } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import BrunchCards from "./Cards";
+import "../App.css";
 
 export default function ChillVibe() {
   const [chill, setChill] = useState([]);
@@ -21,7 +22,7 @@ export default function ChillVibe() {
             {chill.map((restaurant) => {
               return (
                 <>
-                  <Container>
+                  <Container id='vibe'>
                     <BrunchCards
                       name={restaurant.name}
                       image={restaurant.image}

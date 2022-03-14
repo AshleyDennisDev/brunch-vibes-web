@@ -1,8 +1,7 @@
 import { Container, IconButton, Rating } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import BrunchCards from "./Cards";
-import AddLocationIcon from "@mui/icons-material/AddLocation";
-import Star from "@mui/icons-material/Star";
+import "../App.css";
 
 export default function PartyVibe() {
   const [party, setParty] = useState([]);
@@ -18,12 +17,12 @@ export default function PartyVibe() {
         <h2>Loading...</h2>
       ) : (
         <div>
-          <h2>Party Vibes</h2>
+          <h2 id='partyVibe'>Party Vibes</h2>
           <ul>
             {party.map((restaurant) => {
               return (
                 <>
-                  <Container id="party">
+                  <Container id="vibe">
                     <BrunchCards
                       name={restaurant.name}
                       image={restaurant.image}

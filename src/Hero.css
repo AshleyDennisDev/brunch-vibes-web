@@ -11,7 +11,9 @@ html {
 } */
 
 .hero-image {
-  background-image: url("https://cdn.pixabay.com/photo/2017/08/02/21/09/interior-2573445_1280.jpg");
+  background-image: url("https://cdn.pixabay.com/photo/2017/08/02/21/09/interior-2573445_1280.jpg"), linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
+  background-blend-mode: overlay;
+  background-size: cover;
   background-position: center;
   background-size: auto;
   background-repeat: no-repeat;
@@ -37,8 +39,12 @@ html {
 }
 
 a {
+  color: #551a8b;
+  text-decoration: none;
   font-size: 20px;
   font-weight: bold;
   text-align: center;
   margin-right: 40px;
 }
+
+

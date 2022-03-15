@@ -21,7 +21,7 @@ export default function BrunchCards({
 }) {
   return (
     <container>
-      <Card sx={{ maxWidth: 345, height:400 }}>
+      <Card sx={{ maxWidth: 345, height: 400,}} className="vibeCard">
         <CardMedia
           component="img"
           height="170"
@@ -38,15 +38,15 @@ export default function BrunchCards({
           <Typography gutterBottom variant="p" component="div">
             {location}
           </Typography>
-        </CardContent>
-        <CardActions class='cardActions'>
-          <Typography component="rating">{rating}</Typography>
-          <Rating name="rating" value={rating} readOnly />
+          <CardActions class="cardActions">
+            <Typography component="rating">{rating}</Typography>
+            <Rating name="rating" value={rating} readOnly />
 
-          <Button id="webButton" size="small" href={website}>
-            Website
-          </Button>
-        </CardActions>
+            <Button id="webButton" size="small" href={website}>
+              Website
+            </Button>
+          </CardActions>
+        </CardContent>
       </Card>
     </container>
   );

@@ -24,7 +24,7 @@ export default function BrunchCards({
       <Card sx={{ maxWidth: 345 }}>
         <CardMedia
           component="img"
-          height="200"
+          height="150"
           image={image || defaultPic}
           alt={name}
         />
@@ -39,11 +39,11 @@ export default function BrunchCards({
             {location}
           </Typography>
         </CardContent>
-        <CardActions display="flex" align-items="center">
+        <CardActions>
           <Typography component="rating">{rating}</Typography>
           <Rating name="rating" value={rating} readOnly />
 
-          <Button size="small" href={website}>
+          <Button id="webButton" size="small" href={website}>
             Website
           </Button>
         </CardActions>

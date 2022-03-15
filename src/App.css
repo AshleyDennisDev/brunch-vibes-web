@@ -32,13 +32,23 @@
   );
 }
 
+h2{
+  margin-left: 30px;
+}
+
 /* @media("./images/defaultPic.jpeg"){
   opacity: 0.5;
 } */
 
+h3{
+  color: rgb(11, 63, 11);
+  align-content: center;
+}
+
 #partyVibe,
 #chillVibe,
 #chicVibe {
+  margin-top: 80px;
   color: rgb(11, 63, 11);
 }
 
@@ -48,9 +58,16 @@
   margin-bottom: 10px;
 }
 
+.cardActions{
+  display: flex;
+  align-content: space-between;
+  margin-bottom: 0px;
+}
+
 #webButton {
   display: flex;
   justify-content: flex-end;
+  margin-right: 0px;
 }
 
 ul {

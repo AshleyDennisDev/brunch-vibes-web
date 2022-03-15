@@ -21,10 +21,10 @@ export default function BrunchCards({
 }) {
   return (
     <container>
-      <Card sx={{ maxWidth: 345 }}>
+      <Card sx={{ maxWidth: 345, height:400 }}>
         <CardMedia
           component="img"
-          height="150"
+          height="170"
           image={image || defaultPic}
           alt={name}
         />
@@ -39,7 +39,7 @@ export default function BrunchCards({
             {location}
           </Typography>
         </CardContent>
-        <CardActions>
+        <CardActions class='cardActions'>
           <Typography component="rating">{rating}</Typography>
           <Rating name="rating" value={rating} readOnly />
 

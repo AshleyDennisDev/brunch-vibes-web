@@ -47,6 +47,7 @@ export default function AddVibe() {
       noValidate
       autoComplete="off"
     >
+      <h3>Add to Vibes</h3>
       <TextField
         id="nameField"
         label="Restaurant Name"
@@ -86,7 +87,7 @@ export default function AddVibe() {
         </FormControl>
       </>
       <Button variant="outlined" onClick={handleOnClick}>
-        Add Vibe
+        Submit
       </Button>
     </Box>
   );

@@ -4,12 +4,14 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
+import {  useNavigate } from "react-router-dom";
 
 export default function AddVibe() {
   const [vibe, setVibe] = useState("");
   const [name, setName] = useState("");
   const [rating, setRating] = useState(0);
   const [location, setLocation] = useState("");
+  const navigate = useNavigate()
 
   const newVibe = {
     name,
@@ -33,6 +35,7 @@ export default function AddVibe() {
         // .then((data) => setNewVibe(data));
       })
       .catch((err) => alert(err));
+      navigate("/")
   };
 
   return (

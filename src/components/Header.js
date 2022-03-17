@@ -3,7 +3,7 @@ import '../App.css'
 
 export default function Header() {
     return(
-    
+  
    <p className="header"> Brunch Vibes </p>
-   
+ 
     )}

@@ -7,7 +7,7 @@ import {
   signInWithPopup,
 } from "firebase/auth";
 import { app } from "../ConnectAuth";
-import { Button } from "@mui/material";
+import { Box, TextField } from "@mui/material";
 
 export default function Login({ setUser, user }) {
   const [email, setEmail] = useState("");
@@ -22,10 +22,7 @@ export default function Login({ setUser, user }) {
 
     if (localUser) {
       setUser({ ...user, displayName: localUser });
-    } else {
-      setUser(null);
-    }
-    //navigate('/')
+    } 
   }, []);
 
   const handleFormSubmit = (event) => {
@@ -43,7 +40,6 @@ export default function Login({ setUser, user }) {
       .then((result) => {
         setUser(result.user);
         localStorage.setItem("displayName", result.user.displayName);
-        localStorage.setItem("avatar", result.user.photoURL);
         localStorage.setItem("uid", result.user.uid);
 
         console.log("this is my result", result.user.displayName);
@@ -52,40 +48,29 @@ export default function Login({ setUser, user }) {
       .catch(alert);
   };
 
-  console.log("here is my user from my parent component", user);
-
   return (
-    <div className="login">
+    <Box component="form" className="login" onSubmit={handleFormSubmit}>
       <h1>Login</h1>
-      <hr />
-      <form onSubmit={handleFormSubmit}>
-        <label>
-          Email:
-          <input
-            type="email"
-            value={email}
+       
+        <TextField
+          label="Email"
+            id="emailField"
+            name="location"
+            variant="outlined"
             onChange={(e) => setEmail(e.target.value)}
           />
-        </label>
         <br />
-        <label>
-          Password:
-          <input
+        <TextField
+            id="passwordField"
+            label="Password"
             type="password"
-            value={password}
+            variant="outlined"
             onChange={(e) => setPassword(e.target.value)}
           />
-        </label>
         <br />
-        {/* <input type='submit' value='Login'/> */}
-      </form>
       <button
         onClick={handleGoogleLogin}
-        style={{
-          backgroundColor: "rgb(11, 63, 11)",
-          color: "white",
-          border: "none",
-        }}
+        className="loginBtn"
       >
         Login with Google
       </button>
@@ -93,6 +78,6 @@ export default function Login({ setUser, user }) {
         {" "}
         Not a user? <Link to="/signup">Sign Up</Link>
       </p>
-    </div>
+    </Box>
   );
 }

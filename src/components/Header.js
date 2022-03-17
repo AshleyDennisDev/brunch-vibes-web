@@ -4,6 +4,6 @@ import '../App.css'
 export default function Header() {
     return(
   
-   <p className="header"> Brunch Vibes </p>
+   <header className="header"> Brunch Vibes </header>
  
     )}

@@ -15,10 +15,6 @@ import Welcome from "./scenes/Welcome";
 function App() {
   const [user, setUser] = useState();
 
-  // useEffect(() => {
-  //   console.log('here is my useEffect', user)
-  // },[])
-
   return (
     <>
       <div className="App">

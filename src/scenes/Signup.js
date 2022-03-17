@@ -7,6 +7,7 @@ import {
   signInWithPopup,
 } from "firebase/auth";
 import { app } from "../ConnectAuth";
+import { Box, TextField } from "@mui/material";
 
 export default function SignUp({ setUser }) {
   const [email, setEmail] = useState("");
@@ -35,35 +36,28 @@ export default function SignUp({ setUser }) {
   };
 
   return (
-    <div className="signup">
+    <Box component="form" className="signup" onSubmit={handleFormSubmit}>
       <h1>SignUp</h1>
-      <hr />
-      <form onSubmit={handleFormSubmit}>
-        <label>
-          Email:
-          <input
-            type="email"
-            value={email}
+        
+      <TextField
+          label="Email"
+            id="emailField"
+            name="location"
+            variant="outlined"
             onChange={(e) => setEmail(e.target.value)}
           />
-        </label>
         <br />
-        <label>
-          Password:
-          <input
+        <TextField
+            id="passwordField"
+            label="Password"
             type="password"
-            value={password}
+            variant="outlined"
             onChange={(e) => setPassword(e.target.value)}
           />
-        </label>
-      </form>
+          <br/>
       <button
         onClick={handleGoogleLogin}
-        style={{
-          backgroundColor: "rgb(11, 63, 11)",
-          color: "white",
-          border: "none",
-        }}
+     className='signupBtn'
       >
         Sign in with Google
       </button>
@@ -71,6 +65,6 @@ export default function SignUp({ setUser }) {
         {" "}
         Already a user? <Link to="/login">Login</Link>
       </p>
-    </div>
+    </Box>
   );
 }

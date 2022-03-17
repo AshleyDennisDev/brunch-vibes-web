@@ -18,24 +18,20 @@ export default function PartyVibe() {
       ) : (
         <div>
           <h2 id="partyVibe">Party Vibes</h2>
-          <ul>
+          <div className="vibe">
             {party.map((restaurant) => {
               return (
-                <>
-                  <Container id="vibe">
-                    <BrunchCards
-                      name={restaurant.name}
-                      image={restaurant.image}
-                      description={restaurant.description}
-                      location={restaurant.location}
-                      rating={restaurant.rating}
-                      website={restaurant.website}
-                    ></BrunchCards>
-                  </Container>
-                </>
+                <BrunchCards
+                  name={restaurant.name}
+                  image={restaurant.image}
+                  description={restaurant.description}
+                  location={restaurant.location}
+                  rating={restaurant.rating}
+                  website={restaurant.website}
+                />
               );
             })}
-          </ul>
+          </div>
         </div>
       )}
     </div>

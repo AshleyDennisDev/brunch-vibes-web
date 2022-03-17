@@ -21,7 +21,7 @@ export default function BrunchCards({
 }) {
   return (
     <container>
-      <Card sx={{ maxWidth: 345, height: 400,}} className="vibeCard">
+      <Card className="vibeCard">
         <CardMedia
           component="img"
           height="170"

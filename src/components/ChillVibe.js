@@ -18,24 +18,20 @@ export default function ChillVibe() {
       ) : (
         <div>
           <h2 id="chillVibe">Chill Vibes</h2>
-          <ul>
+          <div className="vibe">
             {chill.map((restaurant) => {
               return (
-                <>
-                  <Container id="vibe">
-                    <BrunchCards
-                      name={restaurant.name}
-                      image={restaurant.image}
-                      description={restaurant.description}
-                      location={restaurant.location}
-                      rating={restaurant.rating}
-                      website={restaurant.website}
-                    ></BrunchCards>
-                  </Container>
-                </>
+                <BrunchCards
+                  name={restaurant.name}
+                  image={restaurant.image}
+                  description={restaurant.description}
+                  location={restaurant.location}
+                  rating={restaurant.rating}
+                  website={restaurant.website}
+                />
               );
             })}
-          </ul>
+          </div>
         </div>
       )}
     </div>

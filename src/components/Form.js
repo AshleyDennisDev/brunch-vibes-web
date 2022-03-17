@@ -1,17 +1,17 @@
-import React, { useState } from "react";
+import React, {  useState } from "react";
 import { Box, TextField, Button } from "@mui/material";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
-import {  useNavigate } from "react-router-dom";
+
 
 export default function AddVibe() {
   const [vibe, setVibe] = useState("");
   const [name, setName] = useState("");
   const [rating, setRating] = useState(0);
   const [location, setLocation] = useState("");
-  const navigate = useNavigate()
+
 
   const newVibe = {
     name,
@@ -19,6 +19,7 @@ export default function AddVibe() {
     vibe,
     rating,
   };
+
 
   const handleOnClick = () => {
     fetch("https://brunch-vibes-ad.uc.r.appspot.com/restaurants/", {
@@ -30,12 +31,14 @@ export default function AddVibe() {
     })
       .then(() => {
         fetch("https://brunch-vibes-ad.uc.r.appspot.com/restaurants/").then(
-          (response) => response.json()
+          (response) => {
+            response.json();
+            window.location.reload()
+          }
         );
         // .then((data) => setNewVibe(data));
       })
       .catch((err) => alert(err));
-      navigate("/")
   };
 
   return (

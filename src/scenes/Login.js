@@ -8,6 +8,10 @@ import {
 } from "firebase/auth";
 import { app } from "../ConnectAuth";
 import { Box, TextField } from "@mui/material";
+import Hero from "../components/Hero";
+import PartyVibe from "../components/PartyVibe";
+import ChillVibe from "../components/ChillVibe";
+import ChicVibe from "../components/ChicVibe";
 
 export default function Login({ setUser, user }) {
   const [email, setEmail] = useState("");
@@ -49,10 +53,16 @@ export default function Login({ setUser, user }) {
   };
 
   return (
+    <>
+    <Hero/>
+    <PartyVibe></PartyVibe>
+    <ChillVibe></ChillVibe>
+    <ChicVibe></ChicVibe>
     <Box component="form" className="login" onSubmit={handleFormSubmit}>
-      <h1>Login</h1>
+      <h2>Want to Add to Vibes?</h2>
+      <h3>Login</h3>
        
-        <TextField
+        {/* <TextField
           label="Email"
             id="emailField"
             name="location"
@@ -67,7 +77,7 @@ export default function Login({ setUser, user }) {
             variant="outlined"
             onChange={(e) => setPassword(e.target.value)}
           />
-        <br />
+        <br /> */}
       <button
         onClick={handleGoogleLogin}
         className="loginBtn"
@@ -79,5 +89,6 @@ export default function Login({ setUser, user }) {
         Not a user? <Link to="/signup">Sign Up</Link>
       </p>
     </Box>
+    </>
   );
 }

@@ -6,10 +6,10 @@ export default function Hero() {
     <div class="hero">
       <div class="hero-image">
         <h1 class="h1">What's your Brunch Vibe?</h1>
-        <div class="hero-text">
-          <a href="#partyVibe">Party Vibe</a>
-          <a href="#chillVibe">Chill Vibe</a>
-          <a href="#chicVibe">Chic Vibe</a>
+        <div className="hero-text">
+          <a className="anchor" href="#partyVibe">Party Vibe</a>
+          <a className="anchor" href="#chillVibe">Chill Vibe</a>
+          <a className="anchor" href="#chicVibe">Chic Vibe</a>
         </div>
       </div>
     </div>

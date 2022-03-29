@@ -17,7 +17,6 @@ export default function Welcome({ user }) {
       .then(() => {
         console.log("then logout");
         localStorage.clear();
-        // setUser(null)
         navigate("/login");
       })
       .catch((err) => {

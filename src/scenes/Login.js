@@ -62,7 +62,7 @@ export default function Login({ setUser, user }) {
       <h2>Want to Add to Vibes?</h2>
       <h3>Login</h3>
        
-        {/* <TextField
+        <TextField
           label="Email"
             id="emailField"
             name="location"
@@ -77,7 +77,9 @@ export default function Login({ setUser, user }) {
             variant="outlined"
             onChange={(e) => setPassword(e.target.value)}
           />
-        <br /> */}
+        <br />
+        <button>Login</button>
+        <br/>
       <button
         onClick={handleGoogleLogin}
         className="loginBtn"

@@ -1,9 +1,4 @@
 import "./App.css";
-import ChillVibe from "./components/ChillVibe";
-import PartyVibe from "./components/PartyVibe";
-import ChicVibe from "./components/ChicVibe";
-import Form from "./components/Form";
-import Hero from "./components/Hero";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import { Routes, Route } from "react-router-dom";
@@ -37,11 +32,6 @@ function App() {
             }
           ></Route>
         </Routes>
-        {/* <Hero></Hero>
-        <PartyVibe></PartyVibe>
-        <ChillVibe></ChillVibe>
-        <ChicVibe></ChicVibe>
-        <Form>Add a Vibe</Form> */}
         <Footer></Footer>
       </div>
     </>

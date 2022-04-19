@@ -78,7 +78,7 @@ export default function Login({ setUser, user }) {
             onChange={(e) => setPassword(e.target.value)}
           />
         <br />
-        <button>Login</button>
+        <button className="loginBtn">Login</button>
         <br/>
       <button
         onClick={handleGoogleLogin}

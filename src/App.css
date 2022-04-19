@@ -63,6 +63,7 @@ html {
 .signupBtn {
   font-size: 1.5rem;
   padding: 1rem 2rem;
+  margin: 0.5rem auto;
   background-color: rgb(11, 63, 11);
   color: white;
   border: none;

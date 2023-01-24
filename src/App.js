@@ -3,7 +3,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
-import Login from "./scenes/Login";
+import Login from "./scenes/LoginPage/Login";
 import SignUp from "./scenes/Signup";
 import Welcome from "./scenes/Welcome";
 
@@ -21,16 +21,12 @@ function App() {
           />
           <Route path="/signup" element={<SignUp setUser={setUser} />}></Route>
           <Route
-            path="/"
-            element={
-              user ? (
-                // ? <Welcome user={user} setUser={setUser}/>
-                <Welcome user={user} />
-              ) : (
-                <Login setUser={setUser} />
-              )
+            path="/" element={
+              user 
+              ? <Welcome user={user} /> 
+              : <Login setUser={setUser} />
             }
-          ></Route>
+          />
         </Routes>
         <Footer></Footer>
       </div>

@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { getAuth, signOut } from "firebase/auth";
-import Hero from "../components/Hero";
+import Hero from "../components/hero/Hero";
 import PartyVibe from "../components/PartyVibe";
 import ChillVibe from "../components/ChillVibe";
 import ChicVibe from "../components/ChicVibe";

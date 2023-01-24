@@ -6,12 +6,13 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
 } from "firebase/auth";
-import { app } from "../ConnectAuth";
-import { Box, TextField } from "@mui/material";
-import Hero from "../components/Hero";
-import PartyVibe from "../components/PartyVibe";
-import ChillVibe from "../components/ChillVibe";
-import ChicVibe from "../components/ChicVibe";
+import { app } from "../../ConnectAuth";
+import { Box, Paper, TextField } from "@mui/material";
+import Hero from "../../components/hero/Hero";
+import PartyVibe from "../../components/PartyVibe";
+import ChillVibe from "../../components/ChillVibe";
+import ChicVibe from "../../components/ChicVibe";
+import "./login.scss"
 
 export default function Login({ setUser, user }) {
   const [email, setEmail] = useState("");
@@ -58,26 +59,33 @@ export default function Login({ setUser, user }) {
     <PartyVibe></PartyVibe>
     <ChillVibe></ChillVibe>
     <ChicVibe></ChicVibe>
-    <Box component="form" className="login" onSubmit={handleFormSubmit}>
+    <Box className="loginForm">
+    <Paper  sx={{ backgroundColor: 'transparent'}} elevation={3} component="form" onSubmit={handleFormSubmit}>
+      <div className="loginForm__wrapper">
       <h2>Want to Add to Vibes?</h2>
       <h3>Login</h3>
-       
+       <div className="loginForm__wrapper__input">
+        <span className="loginForm__wrapper__input--fields">
         <TextField
-          label="Email"
+        className="loginForm__wrapper__input--field"
+            label="Email"
             id="emailField"
             name="location"
             variant="outlined"
             onChange={(e) => setEmail(e.target.value)}
           />
-        <br />
+          </span>
+          <span className="loginForm__wrapper__input--fields">
         <TextField
+        className="loginForm__wrapper__input--field"
             id="passwordField"
             label="Password"
             type="password"
             variant="outlined"
             onChange={(e) => setPassword(e.target.value)}
           />
-        <br />
+          </span>
+          </div>
         <button className="loginBtn">Login</button>
         <br/>
       <button
@@ -90,6 +98,8 @@ export default function Login({ setUser, user }) {
         {" "}
         Not a user? <Link to="/signup">Sign Up</Link>
       </p>
+      </div>
+    </Paper>
     </Box>
     </>
   );

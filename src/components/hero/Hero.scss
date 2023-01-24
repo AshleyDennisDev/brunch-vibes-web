@@ -1,15 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&family=Fredoka:wght@500&family=Nanum+Gothic&family=Roboto+Mono:wght@300&family=Ubuntu:wght@300;400&display=swap");
 
-body,
-html {
-  margin: 0;
-  padding: 0;
+.hero{
+  width: 100%;
+
+  &__header {
+  width: 100%;
+  padding-top: 200px;
+  text-align: center;
+  color: rgb(11, 63, 11);
+  font-family: "Fredoka", sans-serif;
+  font-size: 4rem;
+  font-weight: bolder;
 }
 
-.hero-image {
+&__image {
   background-image: url("https://cdn.pixabay.com/photo/2017/08/02/21/09/interior-2573445_1280.jpg"),
     linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
-  background-blend-mode: overlay;
+  background-blend-mode: hard-light;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -19,21 +26,12 @@ html {
   height: 80vh;
 }
 
-.h1 {
-  text-align: center;
-  padding-top: 200px;
-  font-size: 4rem;
-  font-family: "Fredoka", sans-serif;
-  color: rgb(11, 63, 11);
-  font-weight: bolder;
-}
-
-.hero-text {
+&__text {
   text-align: center;
   margin-top: 50px;
 }
 
-.anchor {
+&__anchor {
   color: white;
   text-decoration: none;
   font-size: 1.5rem;
@@ -43,9 +41,11 @@ html {
   border: none;
 }
 
-.heroBtn {
+&__btn {
   background-color: #551a8b;
   border-radius: 2rem;
   margin-right: 3rem;
   align-items: center;
+}
+
 }

@@ -13,11 +13,15 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 .App {
   color: rgb(11, 63, 11);
   font-family: "Fredoka", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-content: center;
   align-items: center;
   background-image: linear-gradient(
@@ -51,7 +55,7 @@ html {
   }
 }
 
-.login,
+/* .login, */
 .signup {
   color: rgb(11, 63, 11);
   font-family: "Fredoka", sans-serif;
@@ -59,7 +63,7 @@ html {
   margin-bottom: 500px;
 }
 
-.loginBtn,
+/* .loginBtn, */
 .signupBtn {
   font-size: 1.5rem;
   padding: 1rem 2rem;

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Hero.scss";
 
 export default function Hero() {
@@ -6,23 +7,23 @@ export default function Hero() {
     <div className="hero">
       <div className="hero__image">
         <div className="hero__header">
-        <h2> What's your Brunch Vibe?</h2>
+          <h2> What's your Brunch Vibe?</h2>
         </div>
         <div className="hero__text">
           <button className="hero__btn">
-            <a className="hero__anchor" href="#partyVibe">
+            <Link className="hero__anchor" to='/party' href="#partyVibe">
               Party Vibe
-            </a>
+            </Link>
           </button>
           <button className="hero__btn">
-            <a className="hero__anchor" href="#chillVibe">
+            <Link className="hero__anchor"to='/chill' href="#chillVibe">
               Chill Vibe
-            </a>
+            </Link>
           </button>
           <button className="hero__btn">
-            <a className="hero__anchor" href="#chicVibe">
+            <Link className="hero__anchor" to='/chic' href="#chicVibe">
               Chic Vibe
-            </a>
+            </Link>
           </button>
         </div>
       </div>

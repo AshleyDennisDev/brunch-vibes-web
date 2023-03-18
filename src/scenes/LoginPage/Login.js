@@ -9,10 +9,10 @@ import {
 import { app } from "../../ConnectAuth";
 import { Box, Paper, TextField } from "@mui/material";
 import Hero from "../../components/hero/Hero";
-import PartyVibe from "../../components/PartyVibe";
-import ChillVibe from "../../components/ChillVibe";
-import ChicVibe from "../../components/ChicVibe";
-import "./login.scss"
+// import PartyVibe from "../../components/PartyVibe";
+// import ChillVibe from "../../components/ChillVibe";
+// import ChicVibe from "../../components/ChicVibe";
+import "./login.scss";
 
 export default function Login({ setUser, user }) {
   const [email, setEmail] = useState("");
@@ -27,7 +27,7 @@ export default function Login({ setUser, user }) {
 
     if (localUser) {
       setUser({ ...user, displayName: localUser });
-    } 
+    }
   }, []);
 
   const handleFormSubmit = (event) => {
@@ -55,52 +55,54 @@ export default function Login({ setUser, user }) {
 
   return (
     <>
-    <Hero/>
-    <PartyVibe></PartyVibe>
-    <ChillVibe></ChillVibe>
-    <ChicVibe></ChicVibe>
-    <Box className="loginForm">
-    <Paper  sx={{ backgroundColor: 'transparent'}} elevation={3} component="form" onSubmit={handleFormSubmit}>
-      <div className="loginForm__wrapper">
-      <h2>Want to Add to Vibes?</h2>
-      <h3>Login</h3>
-       <div className="loginForm__wrapper__input">
-        <span className="loginForm__wrapper__input--fields">
-        <TextField
-        className="loginForm__wrapper__input--field"
-            label="Email"
-            id="emailField"
-            name="location"
-            variant="outlined"
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          </span>
-          <span className="loginForm__wrapper__input--fields">
-        <TextField
-        className="loginForm__wrapper__input--field"
-            id="passwordField"
-            label="Password"
-            type="password"
-            variant="outlined"
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          </span>
+      <Hero />
+      {/* <PartyVibe></PartyVibe>
+      <ChillVibe></ChillVibe>
+      <ChicVibe></ChicVibe> */}
+      <Box className="loginForm">
+        <Paper
+          sx={{ backgroundColor: "transparent" }}
+          elevation={3}
+          component="form"
+          onSubmit={handleFormSubmit}
+        >
+          <div className="loginForm__wrapper">
+            <h2>Want to Add to Vibes?</h2>
+            <h3>Login</h3>
+            <div className="loginForm__wrapper__input">
+              <span className="loginForm__wrapper__input--fields">
+                <TextField
+                  className="loginForm__wrapper__input--field"
+                  label="Email"
+                  id="emailField"
+                  name="location"
+                  variant="outlined"
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </span>
+              <span className="loginForm__wrapper__input--fields">
+                <TextField
+                  className="loginForm__wrapper__input--field"
+                  id="passwordField"
+                  label="Password"
+                  type="password"
+                  variant="outlined"
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+              </span>
+            </div>
+            <button className="loginBtn">Login</button>
+            <br />
+            <button onClick={handleGoogleLogin} className="loginBtn">
+              Login with Google
+            </button>
+            <p>
+              {" "}
+              Not a user? <Link to="/signup">Sign Up</Link>
+            </p>
           </div>
-        <button className="loginBtn">Login</button>
-        <br/>
-      <button
-        onClick={handleGoogleLogin}
-        className="loginBtn"
-      >
-        Login with Google
-      </button>
-      <p>
-        {" "}
-        Not a user? <Link to="/signup">Sign Up</Link>
-      </p>
-      </div>
-    </Paper>
-    </Box>
+        </Paper>
+      </Box>
     </>
   );
 }

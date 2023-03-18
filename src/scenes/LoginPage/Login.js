@@ -9,9 +9,6 @@ import {
 import { app } from "../../ConnectAuth";
 import { Box, Paper, TextField } from "@mui/material";
 import Hero from "../../components/hero/Hero";
-// import PartyVibe from "../../components/PartyVibe";
-// import ChillVibe from "../../components/ChillVibe";
-// import ChicVibe from "../../components/ChicVibe";
 import "./login.scss";
 
 export default function Login({ setUser, user }) {
@@ -56,9 +53,6 @@ export default function Login({ setUser, user }) {
   return (
     <>
       <Hero />
-      {/* <PartyVibe></PartyVibe>
-      <ChillVibe></ChillVibe>
-      <ChicVibe></ChicVibe> */}
       <Box className="loginForm">
         <Paper
           sx={{ backgroundColor: "transparent" }}

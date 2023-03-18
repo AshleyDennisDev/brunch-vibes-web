@@ -5,7 +5,7 @@
   align-content: center;
   justify-content: center;
   margin-bottom: 70px;
-  width:40%;
+  width: 40%;
   margin-bottom: 100px;
   color: rgb(11, 63, 11);
   font-family: "Fredoka", sans-serif;
@@ -13,26 +13,26 @@
 
   &__wrapper {
     padding: 100px;
-
-    &__input{
+    
+    &__input {
       display: flex;
-      flex-direction: column;  
-      width: 100%; 
+      flex-direction: column;
+      width: 100%;
 
-      &--fields{
+      &--fields {
         margin: 10px 0;
-       }
+      }
 
-      &--field{
+      &--field {
         width: 100%;
         margin: 10px;
-      }   
+      }
     }
 
   }
 }
 
-.loginBtn{
+.loginBtn {
   font-size: 1.5rem;
   padding: 1rem 2rem;
   margin: 0.5rem auto;

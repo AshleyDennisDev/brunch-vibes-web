@@ -1,6 +1,6 @@
 import "./App.css";
 import Footer from "./components/Footer";
-import Header from "./components/Header";
+import Header from "./components/navBar/Header";
 import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import Login from "./scenes/LoginPage/Login";

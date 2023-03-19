@@ -6,12 +6,11 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./navBar.scss";
 
-// const settings = ["Profile", "Account", "Dashboard", "Logout"];
-
 export default function Header() {
+const location = useLocation()
 
   return (
     <>
@@ -23,19 +22,28 @@ export default function Header() {
                 Brunch Vibes
               </Link>
             </Typography>
-
+          {
+            location.pathname !== "/" &&
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-              <Link className="nav-header__link" to="/party" href="#partyVibe">
+              { 
+              location.pathname !== "/party" &&
+              <Link className="nav-header__link" to="/party">
                 Party Vibe
               </Link>
-              <Link className="nav-header__link" to="/chill" href="#chillVibe">
-                Chill Vibe
-              </Link>
-              <Link className="nav-header__link" to="/chic" href="#chicVibe">
+              }
+              {
+                location.pathname !== "/chill" &&
+                <Link className="nav-header__link" to="/chill" >
+                  Chill Vibe
+                </Link>
+              }
+             { 
+             location.pathname !== "/chic" &&
+             <Link className="nav-header__link" to="/chic" >
                 Chic Vibe
               </Link>
-            </Box>
-
+              }
+            </Box>}
 
             {/* <Box sx={{ flexGrow: 0 }}>
               <Tooltip title="Open settings">

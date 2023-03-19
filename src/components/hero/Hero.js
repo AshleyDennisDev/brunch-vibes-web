@@ -7,7 +7,7 @@ export default function Hero() {
     <div className="hero">
       <div className="hero__image">
         <div className="hero__header">
-          <h2> What's your Brunch Vibe?</h2>
+          <p> What's your Brunch Vibe?</p>
         </div>
         <div className="hero__text">
           <button className="hero__btn">

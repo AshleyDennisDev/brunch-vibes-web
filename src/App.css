@@ -6,7 +6,6 @@ html {
 
 .App {
   color: rgb(11, 63, 11);
-  font-family: "Fredoka", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -41,25 +40,6 @@ html {
   100% {
     background-position: 0% 50%;
   }
-}
-
-/* .login, */
-.signup {
-  color: rgb(11, 63, 11);
-  font-family: "Fredoka", sans-serif;
-  text-align: center;
-  margin-bottom: 500px;
-}
-
-/* .loginBtn, */
-.signupBtn {
-  font-size: 1.5rem;
-  padding: 1rem 2rem;
-  margin: 0.5rem auto;
-  background-color: rgb(11, 63, 11);
-  color: white;
-  border: none;
-  border-radius: 5px;
 }
 
 .welcome {

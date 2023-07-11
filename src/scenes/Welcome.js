@@ -36,7 +36,7 @@ export default function Welcome({ user }) {
       <PartyVibe></PartyVibe>
       <ChillVibe></ChillVibe>
       <ChicVibe></ChicVibe>
-      {/* <Form>Add a Vibe</Form> */}
+      <Form>Add a Vibe</Form>
     </div>
   );
 }

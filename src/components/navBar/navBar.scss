@@ -2,30 +2,28 @@
 
 .nav-header {
     background-color: rgba(193, 125, 193, 0.351) !important;
-    // padding: 25px 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     padding: 40px;
+    font-family: "Fredoka", sans-serif;
 
 
   &__title{
+    margin-right: 50px;
     text-decoration: none;
     color: rgb(11, 63, 11);
-    font-family: "Fredoka", sans-serif;
-    margin-right: 50px;
 
   }
   &__link{
+    padding: 0.5rem 0.5rem;
     color: white;
     text-decoration: none;
     font-size: 1.5rem;
     text-align: center;
-    padding: 0.5rem 0.5rem;
   }
   &__box-links{
     display: flex;
-
   }
 }

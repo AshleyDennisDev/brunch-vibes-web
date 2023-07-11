@@ -1,16 +1,29 @@
-import {
-  AppBar,
-  Box,
-  Container,
-  Toolbar,
-  Typography,
-} from "@mui/material";
+import { AppBar, Box, Container, Toolbar, Typography } from "@mui/material";
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./navBar.scss";
 
 export default function Header() {
-const location = useLocation()
+  const { pathname } = useLocation();
+  function ShowLinks() {
+    if (pathname === "/" || pathname === "/login" || pathname === "/signup") {
+      return null;
+    } else {
+      return (
+        <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+          <Link className="nav-header__link" to="/party" href="#partyVibe">
+            Party Vibe
+          </Link>
+          <Link className="nav-header__link" to="/chill" href="#chillVibe">
+            Chill Vibe
+          </Link>
+          <Link className="nav-header__link" to="/chic" href="#chicVibe">
+            Chic Vibe
+          </Link>
+        </Box>
+      );
+    }
+  }
 
   return (
     <>
@@ -22,58 +35,7 @@ const location = useLocation()
                 Brunch Vibes
               </Link>
             </Typography>
-          {
-            location.pathname !== "/" &&
-            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-              { 
-              location.pathname !== "/party" &&
-              <Link className="nav-header__link" to="/party">
-                Party Vibe
-              </Link>
-              }
-              {
-                location.pathname !== "/chill" &&
-                <Link className="nav-header__link" to="/chill" >
-                  Chill Vibe
-                </Link>
-              }
-             { 
-             location.pathname !== "/chic" &&
-             <Link className="nav-header__link" to="/chic" >
-                Chic Vibe
-              </Link>
-              }
-            </Box>}
-
-            {/* <Box sx={{ flexGrow: 0 }}>
-              <Tooltip title="Open settings">
-                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-                </IconButton>
-              </Tooltip>
-              <Menu
-                sx={{ mt: "45px" }}
-                id="menu-appbar"
-                anchorEl={anchorElUser}
-                anchorOrigin={{
-                  vertical: "top",
-                  horizontal: "right",
-                }}
-                keepMounted
-                transformOrigin={{
-                  vertical: "top",
-                  horizontal: "right",
-                }}
-                open={Boolean(anchorElUser)}
-                onClose={handleCloseUserMenu}
-              >
-                {settings.map((setting) => (
-                  <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                    <Typography textAlign="center">{setting}</Typography>
-                  </MenuItem>
-                ))}
-              </Menu>
-            </Box> */}
+            <ShowLinks />
           </Toolbar>
         </Container>
       </AppBar>

@@ -1,15 +1,19 @@
 import React, { useEffect, useState } from "react";
 import BrunchCards from "./Cards";
 import "../App.css";
+import { Link, useLocation } from "react-router-dom";
 
 export default function ChillVibe() {
   const [chill, setChill] = useState([]);
+  const { pathname } = useLocation();
+
   useEffect(() => {
     fetch("https://brunch-vibes-ad.uc.r.appspot.com/restaurants/chill")
       .then((response) => response.json())
       .then((data) => setChill(data))
       .catch(alert);
   }, []);
+
   return (
     <div>
       {!chill ? (
@@ -31,6 +35,13 @@ export default function ChillVibe() {
               );
             })}
           </div>
+          {pathname === "/chill" && (
+            <div className="addVibeLink">
+              <p>
+                Add to Vibe! <Link to="/signup">Sign Up</Link>
+              </p>
+            </div>
+          )}
         </div>
       )}
     </div>

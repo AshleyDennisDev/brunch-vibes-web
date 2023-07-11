@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import BrunchCards from "./Cards";
 import "../App.css";
+import { Link, useLocation } from "react-router-dom";
 
 export default function PartyVibe() {
   const [party, setParty] = useState([]);
@@ -10,6 +11,7 @@ export default function PartyVibe() {
       .then((data) => setParty(data))
       .catch(alert);
   }, []);
+  const { pathname } = useLocation();
   return (
     <div>
       {!party ? (
@@ -31,6 +33,13 @@ export default function PartyVibe() {
               );
             })}
           </div>
+          {pathname === "/party" && (
+            <div className="addVibeLink">
+              <p>
+                Add to Vibe! <Link to="/signup">Sign Up</Link>
+              </p>
+            </div>
+          )}
         </div>
       )}
     </div>

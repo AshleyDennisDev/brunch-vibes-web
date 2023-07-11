@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import BrunchCards from "./Cards";
 import "../App.css";
+import { Link, useLocation } from "react-router-dom";
 
 export default function ChicVibe() {
   const [chic, setChic] = useState([]);
+  const { pathname } = useLocation();
+
   useEffect(() => {
     fetch("https://brunch-vibes-ad.uc.r.appspot.com/restaurants/chic")
       .then((response) => response.json())
@@ -31,6 +34,13 @@ export default function ChicVibe() {
               );
             })}
           </div>
+          {pathname === "/chic" && (
+            <div className="addVibeLink">
+              <p>
+                Add to Vibe! <Link to="/signup">Sign Up</Link>
+              </p>
+            </div>
+          )}
         </div>
       )}
     </div>

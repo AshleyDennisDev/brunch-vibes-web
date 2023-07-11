@@ -1,0 +1,53 @@
+.signupForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 70px;
+    width: 40%;
+    margin: 100px;
+    color: rgb(11, 63, 11);
+    font-family: "Fredoka", sans-serif;
+    text-align: center;
+
+    &__wrapper {
+        padding: 100px;
+
+        &__input {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            &--fields {
+                margin: 10px 0;
+            }
+
+            &--field {
+                width: 100%;
+                margin: 10px;
+            }
+        }
+
+    }
+}
+
+.signupBtn__wrapper {
+    display: flex;
+    flex-direction: column;
+
+    &--btn {
+        width: 100%;
+        padding: 15px 25px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 5px;
+        background-color: rgb(11, 63, 11);
+        color: white;
+        font-size: 20px;
+    }
+}
+
+.css-3su884-MuiPaper-root {
+    background-color: none;
+}

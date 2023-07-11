@@ -57,8 +57,8 @@ export default function Login({ setUser, user }) {
     <>
       <Hero />
       <PartyVibe></PartyVibe>
-    <ChillVibe></ChillVibe>
-    <ChicVibe></ChicVibe>
+      <ChillVibe></ChillVibe>
+      <ChicVibe></ChicVibe>
       <Box className="loginForm">
         <Paper
           sx={{ backgroundColor: "transparent" }}
@@ -91,13 +91,14 @@ export default function Login({ setUser, user }) {
                 />
               </span>
             </div>
-            <button className="loginBtn">Login</button>
-            <br />
-            <button onClick={handleGoogleLogin} className="loginBtn">
+            <div className="loginBtn__wrapper">
+
+            <button className="loginBtn__wrapper--btn">Login</button>
+            <button className="loginBtn__wrapper--btn" onClick={handleGoogleLogin}>
               Login with Google
             </button>
+            </div>
             <p>
-              {" "}
               Not a user? <Link to="/signup">Sign Up</Link>
             </p>
           </div>

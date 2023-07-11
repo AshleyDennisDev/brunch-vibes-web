@@ -32,14 +32,20 @@
   }
 }
 
-.loginBtn {
-  font-size: 1.5rem;
-  padding: 1rem 2rem;
-  margin: 0.5rem auto;
-  background-color: rgb(11, 63, 11);
-  color: white;
+.loginBtn__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  &--btn{
+  width: 100%;
+  padding: 15px 25px;
+  margin: 10px 0;
   border: none;
   border-radius: 5px;
+  background-color: rgb(11, 63, 11);
+  color: white;
+  font-size: 20px;
+  }
 }
 
 .css-3su884-MuiPaper-root {

@@ -4,7 +4,7 @@ import Header from "./components/navBar/Header";
 import { Routes, Route} from "react-router-dom";
 import { useState } from "react";
 import Login from "./scenes/LoginPage/Login";
-import SignUp from "./scenes/Signup";
+import Signup from "./scenes/SignUpPage/Signup";
 import Welcome from "./scenes/Welcome";
 import PartyVibe from "./components/PartyVibe";
 import ChillVibe from "./components/ChillVibe";
@@ -22,7 +22,7 @@ function App() {
             path="/login"
             element={<Login setUser={setUser} user={user} />}
           />
-          <Route path="/signup" element={<SignUp setUser={setUser} />}></Route>
+          <Route path="/signup" element={<Signup setUser={setUser} />}></Route>
           <Route
             path="/"
             element={
